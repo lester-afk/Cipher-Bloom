@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-1 {
+  background-color: white;
+}
+
+.bg-2 {
+  background-color: #fff1e35e;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.315);
+}
+
+.bg {
+  background-image: url(BG2.jpg);
+  background-position: center;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: contain;
+}
+
+.bg-color {
+  background-color: #97ac8e;
+}
+
+.bg-color:active {
+  background-color: #7b8f70;
+}
+.bg-color:disabled {
+  background-color: black;
+}
+
+.new-card {
+  margin: 0%;
+  border-radius: 0;
+}
+
+.h1font {
+  font-family: "Lobster", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 100px;
+  color: #97ac8e;
+  text-shadow: 4px 3px #7b8f70;
+}
+
+.btn-color {
+  background-color: black;
+  color: white;
+  border-color: black;
+}
+
+.btn-color:hover {
+  background-color: #7b8f70;
+  color: black;
+  border: #7b8f70;
+}
+
+.btn-color {
+  --bs-btn-active-color: black;
+  --bs-btn-active-bg: whitesmoke;
+  --bs-btn-active-border-color: #0a53be;
+}
+
+.pdy {
+  padding-top: 10px;
+  padding-bottom: 100px;
+}
