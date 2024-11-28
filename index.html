@@ -11,7 +11,11 @@
       crossorigin="anonymous"
     />
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../Cipher Bloom/CSS/style.css"
+    />
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,66 +23,122 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha384-zCBYxETf1Pcj6EGaB1xJhclc5s2Cb8VtsLAnjqOWzBPIe2gX2tOF4LKiYj9Fd6Pz"
+      crossorigin="anonymous"
+    />
   </head>
-
-  <body class="bg-1">
-    <div class="container-fluid overflow-hidden bg">
+  <body>
+    <header>
+      <div class="card">
+        <div class="card-header d-flex justify-content-between">
+          <div>
+            <img
+              src="../Cipher Bloom/BG/1.png"
+              alt="icon"
+              class="img-fluid custom-icon"
+            />
+            Cipher Bloom
+          </div>
+          <button
+            id="darkModeToggle"
+            class="btn btn-sm btn-dark d-flex align-items-center"
+          >
+            <span id="darkModeIcon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="container overflow-hidden">
       <div class="row d-flex justify-content-center mb-3">
-        <div class="pdy col-sm-6 col-md-9 col-lg-12 text-center">
-          <header>
-            <div class="card mx-2 mb-5">
-              <div class="card-header d-flex justify-content-start">
-                Computer Systems Institute
-              </div>
-            </div>
-          </header>
+        <div class="pdy col-sm-10 col-md-12 col-lg-12 text-center">
           <h1 class="h1font">Cipher Bloom</h1>
         </div>
-        <div class="bg-2 col-lg-10 py-5 rounded mb-4">
-          <div class="row d-flex justify-content-center">
-            <div class="d-flex justify-content-around">
-              <button
-                id="encryptBtn"
-                class="col-sm-2 col-md-3 col-lg-2 btn btn-primary btn-lg btn-color"
-                type="button"
-              >
-                ENCRYPT
-              </button>
-              <button
-                id="decryptBtn"
-                class="col-sm-2 col-md-3 col-lg-2 btn btn-lg btn-color btn-primary px-3"
-                type="button"
-              >
-                DECRYPT
-              </button>
-            </div>
 
-            <div class="col-sm-8 col-md-8 col-lg-10">
-              <div class="input-group input-group-lg pt-4 mb-3">
+        <div class="d-flex flex-row justify-content-center">
+          <div class="bg-1 col-sm-8 col-md-9 col-lg-7 py-4 rounded mb-4">
+            <div class="d-flex flex-column justify-content-center px-3">
+              <div class="input-group input-group-md pt-4 mb-3">
                 <input
                   id="inputText"
                   type="text"
                   class="form-control p-3"
-                  placeholder="Input your text to encrypt"
+                  placeholder="Input your text"
                 />
+                <button id="clearButton" class="btn btn-danger">
+                  <i class="bi bi-x-circle"></i>
+                </button>
               </div>
 
-              <div class="input-group input-group-lg pt-4 mb-3">
+              <div class="input-group input-group-md pt-4 mb-3">
                 <input
                   id="resultText"
                   type="text"
                   class="form-control p-3"
                   placeholder="Result"
+                  disabled
                 />
+                <button
+                  id="copyButton"
+                  class="btn btn-secondary d-flex align-items-center"
+                >
+                  <i class="bi bi-clipboard"></i>
+                </button>
               </div>
             </div>
+          </div>
+          <div class="d-flex flex-column rounded mx-3 px-3 py-4 mb-4 bg-1">
+            <button
+              id="voiceCommandBtn"
+              class="col-sm-12 col-md-12 col-lg-12 btn btn-color btn-lg my-2"
+            >
+              <i class="bi bi-mic"></i> Voice
+            </button>
+            <button
+              id="encryptBtn"
+              class="col-sm-12 col-md-12 col-lg-12 btn btn-primary btn-lg btn-color my-2"
+              type="button"
+            >
+              ENCRYPT
+            </button>
+            <button
+              id="decryptBtn"
+              class="col-sm-12 col-md-12 col-lg-12 btn btn-lg btn-color btn-primary my-2"
+              type="button"
+            >
+              DECRYPT
+            </button>
           </div>
         </div>
       </div>
     </div>
     <footer>
-      <div class="card col-lg-12 new-card">
-        <div class="card-header white">Featured</div>
+      <div class="card new-card">
+        <div
+          class="card-footer d-flex justify-content-between align-items-center"
+        >
+          <div class="footer-text">
+            Cipher Bloom © 2024. All Rights Reserved.
+          </div>
+          <div class="social-icons">
+            <a
+              href="https://web.facebook.com/rainjie.sapaula"
+              class="social-icon"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com/_aint.resu/" class="social-icon"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
       </div>
     </footer>
     <script
@@ -86,6 +146,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script src="script.js"></script>
+    <script src="CSS/script.js"></script>
   </body>
 </html>

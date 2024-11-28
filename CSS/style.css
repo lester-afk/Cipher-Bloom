@@ -4,21 +4,21 @@
   box-sizing: border-box;
 }
 .bg-1 {
-  background-color: white;
-}
-
-.bg-2 {
-  background-color: #fff1e35e;
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.315);
+  background-color: #674636;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.74);
 }
 
 .bg {
-  background-image: url(BG2.jpg);
+  background-image: url(../BG/genshin.jpg);
   background-position: center;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: contain;
+}
+
+.container {
+  background-color: #fff8e8;
 }
 
 .bg-color {
@@ -42,8 +42,8 @@
   font-weight: 500;
   font-style: normal;
   font-size: 100px;
-  color: #97ac8e;
-  text-shadow: 4px 3px #7b8f70;
+  color: #aab396;
+  text-shadow: 4px 3px #4a4947;
 }
 
 .btn-color {
@@ -65,6 +65,104 @@
 }
 
 .pdy {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.card {
+  background-color: #aab396;
+}
+
+.card-header {
   padding-top: 10px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
+  font-weight: 1000;
+  font-size: x-large;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: var(--header-text-color);
+}
+
+.card-footer {
+  color: var(--footer-text-color); /* Dynamic text color */
+  font-size: 1rem;
+  text-align: center;
+  background-color: var(--footer-bg-color); /* Dynamic background color */
+}
+
+.new-card {
+  margin: 0;
+  border-radius: 0;
+}
+.custom-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.btn-danger,
+.btn-secondary {
+  background-color: #4a4947;
+  border: 0;
+}
+
+:root {
+  --bg-color: white;
+  --text-color: #000;
+  --card-bg: #aab396;
+  --button-bg: black;
+  --button-text: white;
+  --button-hover-bg: #7b8f70;
+  --button-hover-text: black;
+  --header-text-color: #000;
+  --footer-text-color: #000; /* Footer text color for light mode */
+  --footer-text-color: #fff;
+  --container-bg: #fff8e8;
+  --Font-shadow: #4a4947;
+}
+
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f0f0f0;
+  --card-bg: #333;
+  --button-bg: #444;
+  --button-text: #f0f0f0;
+  --button-hover-bg: #555;
+  --button-hover-text: #fff;
+  --header-text-color: #fff;
+  --container-bg: #2e2e2e;
+  --Font-shadow: #fff8e8;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.card {
+  background-color: var(--card-bg);
+}
+
+.btn-color {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border-color: var(--button-bg);
+}
+
+.btn-color:hover {
+  background-color: var(--button-hover-bg);
+  color: var(--button-hover-text);
+  border-color: var(--button-hover-bg);
+}
+
+.container {
+  background-color: var(--container-bg);
+}
+
+.card-footer {
+  color: var(--footer-text-color);
+}
+
+#darkModeToggle {
+  display: flex;
+  align-items: center;
 }
