@@ -46,8 +46,12 @@
           <h1 class="h1font">Cipher Bloom</h1>
         </div>
 
-        <div class="d-flex flex-row justify-content-center">
-          <div class="bg-1 col-sm-8 col-md-9 col-lg-7 py-4 rounded mb-4">
+        <!-- Flexbox layout -->
+        <div
+          class="d-flex flex-column flex-md-row justify-content-center align-items-center"
+        >
+          <!-- Textboxes Container -->
+          <div class="bg-1 col-sm-12 col-md-8 col-lg-8 py-4 rounded mb-4">
             <div class="d-flex flex-column justify-content-center px-3">
               <div class="input-group input-group-md pt-4 mb-3">
                 <input
@@ -78,23 +82,27 @@
               </div>
             </div>
           </div>
-          <div class="d-flex flex-column rounded mx-3 px-3 py-4 mb-4 bg-1">
+
+          <!-- Buttons Container -->
+          <div
+            class="d-flex flex-column col-sm-12 col-md-3 col-lg-2 align-items-center rounded mx-md-3 py-4 mb-4 bg-1"
+          >
             <button
               id="voiceCommandBtn"
-              class="col-sm-12 col-md-12 col-lg-12 btn btn-color btn-lg my-2"
+              class="col-sm-4 col-md-7 col-lg-8 btn btn-color btn-md m-2"
             >
               <i class="bi bi-mic"></i> Voice
             </button>
             <button
               id="encryptBtn"
-              class="col-sm-12 col-md-12 col-lg-12 btn btn-primary btn-lg btn-color my-2"
+              class="col-sm-4 col-md-7 col-lg-8 btn btn-primary btn-md btn-color m-2"
               type="button"
             >
               ENCRYPT
             </button>
             <button
               id="decryptBtn"
-              class="col-sm-12 col-md-12 col-lg-12 btn btn-lg btn-color btn-primary my-2"
+              class="col-sm-4 col-md-7 col-lg-8 btn btn-md btn-color btn-primary m-2"
               type="button"
             >
               DECRYPT
@@ -103,6 +111,7 @@
         </div>
       </div>
     </div>
+
     <footer>
       <div class="card new-card">
         <div
