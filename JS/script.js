@@ -200,7 +200,7 @@ clearButton.addEventListener("click", () => {
 const voiceCommandBtn = document.getElementById("voiceCommandBtn");
 const encryptBtn = document.getElementById("encryptBtn");
 const decryptBtn = document.getElementById("decryptBtn");
-inputText = document.getElementById("inputText"); // Reference to the input textbox
+const enterText = document.getElementById("inputText"); // Reference to the input textbox
 
 // Check if the browser supports Speech Recognition
 const SpeechRecognition =
@@ -222,7 +222,7 @@ if (SpeechRecognition) {
     const speechResult = event.results[0][0].transcript.trim();
 
     // Display the recognized speech in the input text box
-    inputText.value = speechResult;
+    enterText.value += (enterText.value ? " " : "") + speechResult;
 
     // Check if the user said "encrypt" or "decrypt"
     if (speechResult.toLowerCase().includes("encrypt")) {
